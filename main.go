@@ -11,8 +11,13 @@ const datePiratEmail = "datepirat.de@thinking-aloud.eu"
 const datePiratPassword = "waUueiLAGr"
 
 func main() {
-	http.Login(dateOneUrl, dateOneEmail, dateOnePassword)
-	http.Login(datePiratUrl, datePiratEmail, datePiratPassword)
+	//os.Setenv("HTTP_PROXY", "87.79.253.219")
 
-	http.GetProfiles(8)
+	email := http.CreateEmail()
+	http.RegisterAccount(dateOneUrl, email)
+
+	//http.Login(dateOneUrl, dateOneEmail, dateOnePassword)
+	//http.Login(datePiratUrl, datePiratEmail, datePiratPassword)
+
+	//http.GetProfiles(8)
 }

@@ -3,16 +3,9 @@ package http
 import (
 	"fmt"
 	"strings"
-
-	"gopkg.in/headzoo/surf.v1"
 )
 
-var bow = surf.NewBrowser()
-
 func Login(url string, email string, password string) {
-
-	//os.Setenv("HTTP_PROXY", "87.79.253.219")
-
 	err := bow.Open(url + "login")
 	if err != nil {
 		panic(err)
